@@ -1,7 +1,6 @@
 .logo {
     height: 65px;
     width: 120px;
-    background:black;
 }
 
 .header {
@@ -14,4 +13,5 @@
     height: 85px;
     width: 125px;
     padding: 15px;
+    background: #ffb0b0;
 }

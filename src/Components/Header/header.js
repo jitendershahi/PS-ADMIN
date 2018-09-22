@@ -13,7 +13,8 @@ export class Header extends Component {
                 <a className="navbar-brand header">
                     <img className="image" src={PsLogo}  alt="logo"/>
                 </a>
-                <a className="nav-item nav-link">Home</a>
+                <a className="nav-item nav-link">Home</a>   
+                
                 <a className="nav-item nav-link">About</a>
             </nav>
         )
