@@ -1,0 +1,17 @@
+.logo {
+    height: 65px;
+    width: 120px;
+    background:black;
+}
+
+.header {
+    width: 100px;
+    height: 100px;
+    /* padding: 15px; */
+}
+
+.image {
+    height: 85px;
+    width: 125px;
+    padding: 15px;
+}
