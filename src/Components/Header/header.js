@@ -16,6 +16,7 @@ export class Header extends Component {
                     <img className="image" src={PsLogo}  alt="logo"/>
                 </a>
                 <Link to="/home" className="nav-item nav-link">Home</Link>
+
                 <Link to="/about" className="nav-item nav-link">About</Link>
                 <Link to="/authors" className="nav-item nav-link">Authors</Link>
                

@@ -4,17 +4,20 @@ import Home from '../Components/Home/home'
 import About from '../Components/About/about'
 import Authors from '../Components/Authors/authors'
 
-import { Route } from 'react-router-dom'
+import { Route, Redirect,Switch  } from 'react-router-dom'
 
 export class Routes extends Component {
     render() {
         return (
             <div>
-                <Route exact path="/home" component={Home}/>
-                <Route exact path="/about" component={About}/>
-                <Route exact path="/authors" component={Authors}/>
-
-                {/* <Redirect exact path="/" to="/home" /> */}
+                <Switch >
+                <Route  path="/home" component={Home}/>
+                <Route  path="/about" component={About}/>
+                <Route  path="/authors" component={Authors}/>
+                {/* <Route component={NotFound}/> */} 
+                <Redirect from="/" to="/home" />
+                
+                </Switch >
             </div>
         )
     }
