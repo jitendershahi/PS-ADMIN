@@ -27,8 +27,8 @@ export class Authors extends Component {
                       </tr>
                   </thead>
                   <tbody>
-                      {this.state.authors.map((el) => {
-                          return <tr key={el.id}><td>{el.id}</td><td>{el.firstName} {el.lastName}</td></tr>
+                      {this.state.authors.map((el, index) => {
+                          return <tr key={el.id}><td>{index + 1}</td><td>{el.firstName} {el.lastName}</td></tr>
                       })}
                   </tbody>
                 </table>
