@@ -1,6 +1,7 @@
 import React ,{ Component } from 'react'
 
 import AuthorApi from '../../api/authorApi'
+import AuthorList from '../../Views/AuthorList/authorlist'
 
 export class Authors extends Component {
     state = {
@@ -14,24 +15,11 @@ export class Authors extends Component {
     }
 
     render() {
-        console.log(AuthorApi.getAllAuthors())
         return (
             <div>
                 <h1>Authors</h1>
 
-                <table className="table">
-                  <thead>
-                      <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                      {this.state.authors.map((el, index) => {
-                          return <tr key={el.id}><td>{index + 1}</td><td>{el.firstName} {el.lastName}</td></tr>
-                      })}
-                  </tbody>
-                </table>
+                <AuthorList authors={this.state.authors} />
             </div>
         )
     }
