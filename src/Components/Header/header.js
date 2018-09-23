@@ -3,6 +3,8 @@ import React,{ Component } from 'react'
 import PsLogo from '../../assests/images/PS_logo_F-11.png'
 import './header.css'
 
+import { Link } from 'react-router-dom'
+
 
 export class Header extends Component {
     
@@ -13,9 +15,10 @@ export class Header extends Component {
                 <a className="navbar-brand header">
                     <img className="image" src={PsLogo}  alt="logo"/>
                 </a>
-                <a className="nav-item nav-link">Home</a>   
-                
-                <a className="nav-item nav-link">About</a>
+                <Link to="/home" className="nav-item nav-link">Home</Link>
+                <Link to="/about" className="nav-item nav-link">About</Link>
+                <Link to="/authors" className="nav-item nav-link">Authors</Link>
+               
             </nav>
         )
     }

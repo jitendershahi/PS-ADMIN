@@ -1,30 +1,29 @@
 import React, { Component } from 'react';
 
 import './App.css';
-// import { Route } from 'react-router-dom'
 
 import Header from './Components/Header/header'
-// import Home from './Components/Home/home'
-// import About from './Components/About/about'
-
-import Authors from './Components/Authors/authors'
+import Routes from './Routes/route'
 
 class App extends Component {
   render() {
 
     // let routes = (
     //   <div>
-    //     <Route exact path="/home" Component={Home}/>
-    //     <Route exact path="/about" Component={About}/>
+    //     <Route  path="/" component={Header} />
+    //     <Route exact path="/home" component={Home}/>
+    //     <Route exact path="/about" component={About}/>
+    //     <Route exact path="/authors" component={Authors} />
+
     //   </div>
     // )
 
     return (
       <div>
         <Header />
-        <Authors />
-        {/* <Home />
-        <About /> */}
+        <div className="container-fluid" >
+        <Routes />
+        </div>
       </div>
     );
   }

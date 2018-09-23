@@ -15,3 +15,7 @@
     padding: 15px;
     background: #ffb0b0;
 }
+
+a {
+    cursor: pointer;
+}

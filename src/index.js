@@ -3,7 +3,7 @@ import $ from 'jquery';
 import Popper from 'popper.js';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -15,9 +15,9 @@ console.log($)
 console.log(Popper)
 
 const appRoutes = (
-    <BrowserRouter>
-        <App />
-    </BrowserRouter >
+    <Router>
+      <App />
+    </Router >
 )
 
 ReactDOM.render(appRoutes, document.getElementById('root'));
