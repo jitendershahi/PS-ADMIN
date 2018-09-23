@@ -6,14 +6,14 @@
 .header {
     width: 100px;
     height: 100px;
-    /* padding: 15px; */
 }
 
 .image {
     height: 85px;
     width: 125px;
     padding: 15px;
-    background: #ffb0b0;
+    background: #ff8a96;
+    border-radius: 30px;
 }
 
 a {
