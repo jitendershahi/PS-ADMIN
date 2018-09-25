@@ -5,7 +5,8 @@ import { PropTypes } from 'prop-types'
 export const Input = (props) => {
     let wrapperClass = 'form-group';
     if(props.error && props.error.length > 0){
-        wrapperClass += " " + 'has-error';
+        // wrapperClass += " " + 'has-error';
+        wrapperClass = `${wrapperClass} has-error`
     }
 
     return (
@@ -18,7 +19,7 @@ export const Input = (props) => {
                 placeholder={props.placeholder} 
                 value={props.value}
                 onChange={props.click} />
-                <div className="input">{props.error}</div>
+                <div className="input text-danger">{props.error}</div>
              </div>
         </div>
     )
@@ -27,8 +28,8 @@ export const Input = (props) => {
 
 Input.propTypes = {
     name: PropTypes.string.isRequired,
-    error: PropTypes.string,
     onChange:PropTypes.func.isRequired,
+    error:PropTypes.any,
     label: PropTypes.string.isRequired,
     placeholder: PropTypes.string,
     value:PropTypes.string
