@@ -2,18 +2,25 @@ import React from 'react'
 
 import './AuthorForm.css'
 
+import Input from '../Input/Input'
+
 export const AuthorForm = (props) => {
 
         return (
             <form>
                 <h1>Manage Authors</h1>
-                <label htmlFor="firstName">First Name</label>
+                <Input name="firstName"
+                 label="FirstName"
+                 placeholder="First Name"
+                 value={props.author.firstName}
+                 click={props.clicked}/>
+                {/* <label htmlFor="firstName">First Name</label>
                 <input type="text"
                  name="firstName"
                  className="form-control input" 
                  placeholder="First Name" 
                  value={props.author.firstName}
-                 onChange={props.clicked} />
+                 onChange={props.clicked} /> */}
 
                 <label htmlFor="lastName">Last Name</label>
                 <input type="text"
