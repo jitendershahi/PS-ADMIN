@@ -24,7 +24,6 @@ export class CreateAuthor extends Component {
         let form = { ...this.state.author }
         form[field] = value
 
-        console.log(form)
         this.setState({
             author:form
         })
@@ -57,7 +56,6 @@ export class CreateAuthor extends Component {
         AuthorApi.saveAuthor(this.state.author)
         toastr.success("Author Saved!!")
         this.props.history.push('/authors')
-        console.log(this.props)
     }
 
     render() {
@@ -65,7 +63,8 @@ export class CreateAuthor extends Component {
             <div>
                 <AuthorForm author={this.state.author} 
                 clicked={(event) => this.handleForm(event)} 
-                error={this.state.error}/>
+                error={this.state.error}
+                saveas={this.saveAuthor}/>
             </div>
         )
     }
